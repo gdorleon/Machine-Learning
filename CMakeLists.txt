@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.2.0)
+project( perceptron_simple )
+find_package( OpenCV REQUIRED )
+add_executable( perceptron_simple perceptron_simple.cpp )
+target_link_libraries( perceptron_simple ${OpenCV_LIBS} )

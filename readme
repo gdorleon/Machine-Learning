@@ -1,0 +1,13 @@
+./perceptron_simple data/ovarian/ovarian.trn data/ovarian/ovarian.txt 1 100 
+
+- premier paramètre est le nom du fichier d'entrainement
+- deuxième paramètre est le nom du fichier de test
+- troisième parmètre est la valeur du pas
+- quatrième paramètre est la valeur du nombre maximal d'ittérations.
+ 
+./perceptron_simple data/leukemia/ALLAML.trn data/leukemia/ALLAML.tst 0 10
+ ./perceptron_simple data/ovarian/ovarian.trn data/ovarian/ovarian.tst 0 10
+
+***********fonctionnement du programme*************
+ Ceci est une implémentation de l'algorithme réseau de neurone une couche qui prend en entrée un ensemble de données d'apprentissage , un ensemble de données de tests, un taux d'apprentissage et un nombre maximal d'ittération
+Il faut noter que le taux de bon classement dépendra entre autre du taux d'apprentissage choisi, du nombre maximal d'ittération et  et aussi des ensembles d'apprentissage et de test sélectionné dans le cas du hold-out. pour celà on a écrit un script qui permet de lancer le programme successivement sur toutes les données et recupérer après un fichier au format .txt contenant la matrice de confusion et le taux de bon classement ainsi que la valeur du taux d'apprentissage t du nombre d'ittération maximal optimal. Ceci nous permettra de générer de fichier à la fin que pourrons être interprétés. Le script shell en question est présent dans le repertoire source du projet.
