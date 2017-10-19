@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.2.0)
+project( tp1_learning_gervais_ginel )
+find_package( OpenCV REQUIRED )
+add_executable( tp1_learning_gervais_ginel tp1_learning_gervais_ginel.cpp )
+target_link_libraries( tp1_learning_gervais_ginel ${OpenCV_LIBS} )

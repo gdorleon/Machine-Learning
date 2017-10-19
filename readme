@@ -1,0 +1,23 @@
+-------lancement du programme pour le hold-out-----------
+./tp1_learning_gervais_ginel data/fp/fp.trn data/fp/fp.tst 1 1
+
+./tp1_learning_gervais_ginel data/iris/iris.trn data/iris/iris.tst 1 1 100 4 50
+
+- premier paramètre est le nom du fichier d'entrainement
+- deuxième paramètre est le nom du fichier de text
+- troisième parmètre est la valeur de k=1
+- quatrième paramètre est la valeur de la distance utilisée.
+ 1 distance euclidienne
+ 2 distance de manathan
+ 3 distance cosinus
+- cinquième paramètre est le nombre de lignes du trainset
+- sixième paramètre est le nombre d'attributs du trainset
+- septième paramètre est le nombre de lignes du testset
+
+***********fonctionnement du programme*************
+ Ceci est une implémentation de l'algorithme k-nn qui prend en entrée un ensemble de données d'apprentissage , un ensemble de données de tests et une distance(euclidienne, manathan ou cosinus) pour calculer la matrice de confusion ainsi que le taux de bon classement.
+-Il permet la mise en oeuvre du protocole hold-out, ceci est divisant le jeux de données en deux parties training set et testset. Le training set
+prend 2/3 des données tandis que le test prend les 1/3 restants. Les données choisies pour le test et l'entrainement son choisient à chaque fois de manière aléatoire, pour faire varier au maximum l'ensemble d'apprentissage et de test.
+-D'autre part il permet de prendre un ensemble d'apprentissage et un ensemble test fixé puis de calculer la matrice de confusion et le taux de bon classement pour un type de distance donnée.
+Il faut noter que le taux de bon classement dépendra entre autre de la distance choisie et aussi des ensembles d'apprentissage et de test sélectionné comme dans hold-out. pour celà on a écrit un script qui permet de lancer le programme successivement sur toutes les données et recupérer après un fichier au format .txt contenant la matrice de confusion et le taux de bon classement ainsi que la valeur de k. Ceci nous permettra de générer de fichier à la fin qui pourrons être interprétés. Le script shell en question est présent dans le repertoire source du projet.
+
